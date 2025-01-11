@@ -11,7 +11,13 @@ export const UserCreation = () => {
   const [success, setSuccess] = useState("");
 
   useEffect(() => {
-    setToken();
+    async function generateToken() {
+      const response = await axios.get(
+        "http://localhost:8080/api/admin/generate-token"
+      );
+      setToken(response.data.token);
+    }
+    generateToken();
   }, []);
 
   const handleSubmit = async (e) => {
