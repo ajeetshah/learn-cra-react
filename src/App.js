@@ -8,6 +8,8 @@ function App() {
       <Link to={"/bar"}>Bar</Link>
       <br />
       <Link to="/tanstack-query">TanStackQueryDemo</Link>
+      <br />
+      <Link to="/user-creation">UserCreation</Link>
     </div>
   );
 }
