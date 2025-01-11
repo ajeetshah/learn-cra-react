@@ -7,6 +7,7 @@ import { BrowserRouter, Route, Routes } from "react-router";
 import Foo from "./Foo";
 import Bar from "./Bar";
 import FinalForm from "./FinalForm";
+import { TanStackQueryDemo } from "./tanstackQuery/TanstackQueryDemo";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
@@ -17,6 +18,7 @@ root.render(
         <Route path="/foo" element={<Foo />} />
         <Route path="/bar" element={<Bar />} />
         <Route path="/final-form" element={<FinalForm />} />
+        <Route path="/tanstack-query" element={<TanStackQueryDemo />} />
       </Routes>
     </BrowserRouter>
   </React.StrictMode>
