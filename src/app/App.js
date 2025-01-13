@@ -10,6 +10,8 @@ function App() {
       <Link to="/tanstack-query">TanStackQueryDemo</Link>
       <br />
       <Link to="/user-creation">UserCreation</Link>
+      <br />
+      <Link to="/iframe">IFrame</Link>
     </div>
   );
 }

@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
-import { setToken } from "./storageService";
+import { setToken } from "../storageService";
 
 export const UserCreation = () => {
   const [username, setUsername] = useState("");

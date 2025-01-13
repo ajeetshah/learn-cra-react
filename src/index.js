@@ -1,14 +1,15 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import "./index.css";
-import App from "./App";
+import App from "./app/App";
 import reportWebVitals from "./reportWebVitals";
 import { BrowserRouter, Route, Routes } from "react-router";
-import Foo from "./Foo";
-import Bar from "./Bar";
-import FinalForm from "./FinalForm";
+import Bar from "./stackoverflow/Bar";
+import FinalForm from "./stackoverflow/FinalForm";
 import { TanStackQueryDemo } from "./tanstackQuery/TanstackQueryDemo";
-import { UserCreation } from "./UserCreation";
+import { UserCreation } from "./stackoverflow/UserCreation";
+import { IFrame } from "./stackoverflow/IFrame";
+import Foo from "./stackoverflow/Foo";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
@@ -21,6 +22,7 @@ root.render(
         <Route path="/final-form" element={<FinalForm />} />
         <Route path="/tanstack-query" element={<TanStackQueryDemo />} />
         <Route path="/user-creation" element={<UserCreation />} />
+        <Route path="/iframe" element={<IFrame />} />
       </Routes>
     </BrowserRouter>
   </React.StrictMode>
