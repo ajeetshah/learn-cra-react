@@ -1,16 +1,20 @@
 import { useEffect, useRef, useState } from "react";
 
-const iframeSrc = "https://www.w3schools.com/html/default.asp";
+const iframeSrc = "http://localhost:3000/foo";
 
 export function IFrame() {
   const iframeRef = useRef(null);
-  const [consoleOutput, setConsoleOutput] = useState([]);
+
+  console.log(iframeRef)
+  console.log(window)
+  const [consoleOutput, setConsoleOutput] = useState(["initial"]);
 
   useEffect(() => {
     if (iframeRef.current) {
       const iframeWindow = iframeRef.current.contentWindow;
       if (iframeWindow) {
         const originalConsole = iframeWindow.console;
+
         const newConsoleOutput = [];
         const wrapConsoleMethod = (method, prefix) => {
           return (...args) => {
@@ -32,7 +36,7 @@ export function IFrame() {
   return (
     <div>
       <div>
-        <h3>Вывод консоли из iframe:</h3>
+        <h3>Console output from iframe:</h3>
         <pre>{consoleOutput.join("\n")}</pre>
       </div>
 
@@ -40,7 +44,14 @@ export function IFrame() {
         title="my-iframe"
         ref={iframeRef}
         src={iframeSrc}
-        onLoad={() => console.warn("iframe loaded")}
+        onLoad={() => {
+          console.log("Loaded");
+          iframeRef.current.contentWindow.console.log("this is log message");
+          iframeRef.current.contentWindow.console.warn("this is warn message");
+          iframeRef.current.contentWindow.console.error(
+            "this is an error message"
+          );
+        }}
       />
     </div>
   );
