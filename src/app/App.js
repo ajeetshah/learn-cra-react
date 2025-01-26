@@ -12,6 +12,8 @@ function App() {
       <Link to="/user-creation">UserCreation</Link>
       <br />
       <Link to="/iframe">IFrame</Link>
+      <br />
+      <Link to="/register">Register</Link>
     </div>
   );
 }

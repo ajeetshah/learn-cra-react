@@ -10,6 +10,7 @@ import { TanStackQueryDemo } from "./tanstackQuery/TanstackQueryDemo";
 import { UserCreation } from "./stackoverflow/UserCreation";
 import { IFrame } from "./stackoverflow/IFrame";
 import Foo from "./stackoverflow/Foo";
+import Register from "./stackoverflow/Register";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
@@ -23,6 +24,7 @@ root.render(
         <Route path="/tanstack-query" element={<TanStackQueryDemo />} />
         <Route path="/user-creation" element={<UserCreation />} />
         <Route path="/iframe" element={<IFrame />} />
+        <Route path="/register" element={<Register />} />
       </Routes>
     </BrowserRouter>
   </React.StrictMode>
