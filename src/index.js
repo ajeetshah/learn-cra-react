@@ -11,22 +11,27 @@ import { UserCreation } from "./stackoverflow/UserCreation";
 import { IFrame } from "./stackoverflow/IFrame";
 import Foo from "./stackoverflow/Foo";
 import Register from "./stackoverflow/Register";
+import { MyTimePicker } from "./stackoverflow/TimePicker";
+import { FluentProvider, webLightTheme } from "@fluentui/react-components";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
-    <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<App />} />
-        <Route path="/foo" element={<Foo />} />
-        <Route path="/bar" element={<Bar />} />
-        <Route path="/final-form" element={<FinalForm />} />
-        <Route path="/tanstack-query" element={<TanStackQueryDemo />} />
-        <Route path="/user-creation" element={<UserCreation />} />
-        <Route path="/iframe" element={<IFrame />} />
-        <Route path="/register" element={<Register />} />
-      </Routes>
-    </BrowserRouter>
+    <FluentProvider theme={webLightTheme}>
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<App />} />
+          <Route path="/foo" element={<Foo />} />
+          <Route path="/bar" element={<Bar />} />
+          <Route path="/final-form" element={<FinalForm />} />
+          <Route path="/tanstack-query" element={<TanStackQueryDemo />} />
+          <Route path="/user-creation" element={<UserCreation />} />
+          <Route path="/iframe" element={<IFrame />} />
+          <Route path="/register" element={<Register />} />
+          <Route path="/my-timepicker" element={<MyTimePicker />} />
+        </Routes>
+      </BrowserRouter>
+    </FluentProvider>
   </React.StrictMode>
 );
 

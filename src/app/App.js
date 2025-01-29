@@ -14,6 +14,8 @@ function App() {
       <Link to="/iframe">IFrame</Link>
       <br />
       <Link to="/register">Register</Link>
+      <br />
+      <Link to="/my-timepicker">MyTimePicker</Link>
     </div>
   );
 }
